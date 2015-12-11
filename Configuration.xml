@@ -134,6 +134,7 @@
 			<DataProcessor>ТипПрофиля_ОтправитьПисьмо</DataProcessor>
 			<DataProcessor>СверкаФайловСборки</DataProcessor>
 			<DataProcessor>СборкаКонфигураций</DataProcessor>
+			<DataProcessor>RunProcessAndExit</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
