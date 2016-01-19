@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыполнитьТекущийСценарий" id="68">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьТекущийСценарий</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаВыполнитьТекущийСценарийРасширеннаяПодсказка" id="69"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ТипПрофиля" id="10">
+			<DataPath>Объект.ТипПрофиля</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипПрофиляКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТипПрофиляРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ТипПрофиляПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Pages name="Страницы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<Page name="ГруппаРеквизитыПрофиля" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизиты профиля</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаРеквизитыПрофиляРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<Table name="РеквизитыПрофиля" id="17">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РеквизитыПрофиля</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РеквизитыПрофиляКонтекстноеМеню" id="18"/>
+							<AutoCommandBar name="РеквизитыПрофиляКоманднаяПанель" id="19">
+								<ChildItems>
+									<Button name="РеквизитыПрофиляОбновитьРеквизиты" id="66">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОбновитьРеквизиты</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="РеквизитыПрофиляОбновитьРеквизитыРасширеннаяПодсказка" id="67"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="РеквизитыПрофиляРасширеннаяПодсказка" id="20"/>
+							<SearchStringAddition name="РеквизитыПрофиляСтрокаПоиска" id="21">
+								<Source>
+									<lf:elementId>17</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="РеквизитыПрофиляСтрокаПоискаКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="РеквизитыПрофиляСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РеквизитыПрофиляСостояниеПросмотра" id="24">
+								<Source>
+									<lf:elementId>17</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="РеквизитыПрофиляСостояниеПросмотраКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="РеквизитыПрофиляСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РеквизитыПрофиляУправлениеПоиском" id="27">
+								<Source>
+									<lf:elementId>17</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="РеквизитыПрофиляУправлениеПоискомКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="РеквизитыПрофиляУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РеквизитыПрофиляНомерСтроки" id="30">
+									<DataPath>Объект.РеквизитыПрофиля.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РеквизитыПрофиляНомерСтрокиКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="РеквизитыПрофиляНомерСтрокиРасширеннаяПодсказка" id="32"/>
+								</LabelField>
+								<InputField name="РеквизитыПрофиляРеквизит" id="33">
+									<DataPath>Объект.РеквизитыПрофиля.Реквизит</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РеквизитыПрофиляРеквизитКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="РеквизитыПрофиляРеквизитРасширеннаяПодсказка" id="35"/>
+								</InputField>
+								<InputField name="РеквизитыПрофиляЗначениеРеквизита" id="36">
+									<DataPath>1/0:39aa7f5a-be50-4488-8d90-741e62e9f078/0:efc5f7b8-dd46-40e9-ad9a-9ef1458aa9b2</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РеквизитыПрофиляЗначениеРеквизитаКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="РеквизитыПрофиляЗначениеРеквизитаРасширеннаяПодсказка" id="38"/>
+								</InputField>
+								<InputField name="РеквизитыПрофиляПараметр" id="39">
+									<DataPath>Объект.РеквизитыПрофиля.Значение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РеквизитыПрофиляПараметрКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="РеквизитыПрофиляПараметрРасширеннаяПодсказка" id="41"/>
+									<Events>
+										<Event name="StartChoice">РеквизитыПрофиляПараметрНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНаборПрофилей" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Набор профилей</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаНаборПрофилейРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<Table name="НаборПрофилей" id="44">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.НаборПрофилей</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НаборПрофилейКонтекстноеМеню" id="45"/>
+							<AutoCommandBar name="НаборПрофилейКоманднаяПанель" id="46"/>
+							<ExtendedTooltip name="НаборПрофилейРасширеннаяПодсказка" id="47"/>
+							<SearchStringAddition name="НаборПрофилейСтрокаПоиска" id="48">
+								<Source>
+									<lf:elementId>44</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="НаборПрофилейСтрокаПоискаКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="НаборПрофилейСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НаборПрофилейСостояниеПросмотра" id="51">
+								<Source>
+									<lf:elementId>44</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="НаборПрофилейСостояниеПросмотраКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="НаборПрофилейСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НаборПрофилейУправлениеПоиском" id="54">
+								<Source>
+									<lf:elementId>44</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="НаборПрофилейУправлениеПоискомКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="НаборПрофилейУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НаборПрофилейНомерСтроки" id="57">
+									<DataPath>Объект.НаборПрофилей.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НаборПрофилейНомерСтрокиКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="НаборПрофилейНомерСтрокиРасширеннаяПодсказка" id="59"/>
+								</LabelField>
+								<InputField name="НаборПрофилейПрофиль" id="60">
+									<DataPath>Объект.НаборПрофилей.Профиль</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НаборПрофилейПрофильКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="НаборПрофилейПрофильРасширеннаяПодсказка" id="62"/>
+								</InputField>
+								<CheckBoxField name="НаборПрофилейПрерватьСценарийПоОшибке" id="63">
+									<DataPath>Объект.НаборПрофилей.НеПропускатьПриОшибке</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НаборПрофилейПрерватьСценарийПоОшибкеКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="НаборПрофилейПрерватьСценарийПоОшибкеРасширеннаяПодсказка" id="65"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Профили</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьРеквизиты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьРеквизиты</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыполнитьТекущийСценарий" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить текущий сценарий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить текущий сценарий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьТекущийСценарий</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

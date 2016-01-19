@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<Configuration uuid="d091d2df-8e45-4635-99d7-b2d00b02d9a0" formatVersion="1.0">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+	<Configuration uuid="d091d2df-8e45-4635-99d7-b2d00b02d9a0">
 		<InternalInfo>
 			<xr:ContainedObject>
 				<xr:ClassId>9cd510cd-abfc-11d4-9434-004095e12fc7</xr:ClassId>
@@ -90,6 +90,10 @@
 					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">LocalNotification</v8:Key>
 					<v8:Value xsi:type="xs:boolean">false</v8:Value>
 				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Print</v8:Key>
+					<v8:Value xsi:type="xs:boolean">false</v8:Value>
+				</v8:pair>
 			</RequiredMobileApplicationPermissions>
 			<DefaultInterface/>
 			<DefaultStyle/>
@@ -101,7 +105,7 @@
 			<ConfigurationInformationAddress/>
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<ObjectAutonumerationMode>NotAutoFree</ObjectAutonumerationMode>
-			<ModalityUseMode>DontUse</ModalityUseMode>
+			<ModalityUseMode>Use</ModalityUseMode>
 			<SynchronousExtensionAndAddInCallUseMode>Use</SynchronousExtensionAndAddInCallUseMode>
 			<InterfaceCompatibilityMode>Taxi</InterfaceCompatibilityMode>
 			<CompatibilityMode>Version8_3_5</CompatibilityMode>
@@ -111,9 +115,13 @@
 			<Language>Русский</Language>
 			<Subsystem>Тесты</Subsystem>
 			<Subsystem>АвтоматизацияОбновлений</Subsystem>
+			<SessionParameter>ЛогПоследнегоСценария</SessionParameter>
 			<CommonModule>ПакетныйРежим</CommonModule>
+			<CommonModule>Логирование</CommonModule>
 			<Catalog>Профили</Catalog>
+			<Catalog>ПараметрыШагов</Catalog>
 			<Enum>ТипыПрофилей</Enum>
+			<Enum>ТипыПараметров</Enum>
 			<DataProcessor>xddEntryPoint</DataProcessor>
 			<DataProcessor>xddTestRunner</DataProcessor>
 			<DataProcessor>xddDecorator</DataProcessor>
@@ -125,16 +133,17 @@
 			<DataProcessor>ТипПрофиля_ОбновлениеКонфигурацииИзХранилища</DataProcessor>
 			<DataProcessor>ТипПрофиля_ОбновлениеКонфигурацииБД</DataProcessor>
 			<DataProcessor>ТипПрофиля_ПрогонТестов</DataProcessor>
-			<DataProcessor>ТипПрофиля_УдалитьФайлыПоМаске</DataProcessor>
 			<DataProcessor>ТипПрофиля_РазборКонфигурацииНаФайлы</DataProcessor>
 			<DataProcessor>ТипПрофиля_ЗагрузкаКонфигурацииИзФайлов</DataProcessor>
 			<DataProcessor>ТипПрофиля_ПодготовитьСборкуКонфигурации</DataProcessor>
 			<DataProcessor>ТипПрофиля_СозданиеПустойБазы1С</DataProcessor>
 			<DataProcessor>ТипПрофиля_ВыгрузкаКонфигурацииВФайл</DataProcessor>
 			<DataProcessor>ТипПрофиля_ОтправитьПисьмо</DataProcessor>
+			<DataProcessor>ТипПрофиля_ЗаписатьЛогиВФайл</DataProcessor>
 			<DataProcessor>СверкаФайловСборки</DataProcessor>
 			<DataProcessor>СборкаКонфигураций</DataProcessor>
-			<DataProcessor>RunProcessAndExit</DataProcessor>
+			<DataProcessor>ТипПрофиля_СинтаксическийКонтроль</DataProcessor>
+			<DataProcessor>ТипПрофиля_АнализСинтаксическогоКонтроля</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

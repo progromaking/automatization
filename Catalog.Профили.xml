@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
 	<Catalog uuid="aabc008e-52e9-46c4-b787-aca4e9d1866d">
 		<InternalInfo>
 			<xr:GeneratedType name="CatalogObject.Профили" category="Object">
@@ -37,7 +37,7 @@
 			<LimitLevelCount>false</LimitLevelCount>
 			<LevelCount>2</LevelCount>
 			<FoldersOnTop>true</FoldersOnTop>
-			<UseStandardCommands>false</UseStandardCommands>
+			<UseStandardCommands>true</UseStandardCommands>
 			<Owners/>
 			<SubordinationUse>ToItems</SubordinationUse>
 			<CodeLength>9</CodeLength>
@@ -188,22 +188,18 @@
 							<FullTextSearch>Use</FullTextSearch>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="efc5f7b8-dd46-40e9-ad9a-9ef1458aa9b2">
+					<Attribute uuid="a3f3ab8b-a511-4cab-9eb5-9d6345fb321f">
 						<Properties>
-							<Name>ЗначениеРеквизита</Name>
+							<Name>Значение</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Значение реквизита</v8:content>
+									<v8:content>Значение</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>xs:string</v8:Type>
-								<v8:StringQualifiers>
-									<v8:Length>0</v8:Length>
-									<v8:AllowedLength>Variable</v8:AllowedLength>
-								</v8:StringQualifiers>
+								<v8:Type>cfg:CatalogRef.ПараметрыШагов</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -293,11 +289,11 @@
 					</Attribute>
 					<Attribute uuid="b1c7995e-3a13-4649-93cd-2078925a47e2">
 						<Properties>
-							<Name>ПрерватьСценарийПоОшибке</Name>
+							<Name>НеПропускатьПриОшибке</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Прервать сценарий по ошибке</v8:content>
+									<v8:content>Не пропускать при ошибке</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -307,7 +303,12 @@
 							<PasswordMode>false</PasswordMode>
 							<Format/>
 							<EditFormat/>
-							<ToolTip/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если флажок не стоит, то шаг будет пропущен, если в предыдущих шагах были ошибки</v8:content>
+								</v8:item>
+							</ToolTip>
 							<MarkNegatives>false</MarkNegatives>
 							<Mask/>
 							<MultiLine>false</MultiLine>
