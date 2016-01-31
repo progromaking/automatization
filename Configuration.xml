@@ -140,10 +140,12 @@
 			<DataProcessor>ТипПрофиля_ВыгрузкаКонфигурацииВФайл</DataProcessor>
 			<DataProcessor>ТипПрофиля_ОтправитьПисьмо</DataProcessor>
 			<DataProcessor>ТипПрофиля_ЗаписатьЛогиВФайл</DataProcessor>
-			<DataProcessor>СверкаФайловСборки</DataProcessor>
-			<DataProcessor>СборкаКонфигураций</DataProcessor>
 			<DataProcessor>ТипПрофиля_СинтаксическийКонтроль</DataProcessor>
 			<DataProcessor>ТипПрофиля_АнализСинтаксическогоКонтроля</DataProcessor>
+			<DataProcessor>СверкаФайловСборки</DataProcessor>
+			<DataProcessor>СборкаКонфигураций</DataProcessor>
+			<DataProcessor>ПостроениеДереваПроцедур</DataProcessor>
+			<DataProcessor>СборкаКонфигураций2</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
