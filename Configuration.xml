@@ -146,6 +146,8 @@
 			<DataProcessor>СборкаКонфигураций</DataProcessor>
 			<DataProcessor>ПостроениеДереваПроцедур</DataProcessor>
 			<DataProcessor>СборкаКонфигураций2</DataProcessor>
+			<DataProcessor>АнализСинтаксическогоКонтроля</DataProcessor>
+			<DataProcessor>ПодготовкаКонфигурацииКПостроениюДереваВызоваПроцедур</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

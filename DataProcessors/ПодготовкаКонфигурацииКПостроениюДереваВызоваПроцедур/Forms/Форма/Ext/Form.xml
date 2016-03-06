@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="КаталогИсходныхФайлов" id="1">
+			<DataPath>Объект.КаталогИсходныхФайлов</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="КаталогИсходныхФайловКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КаталогИсходныхФайловРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="StartChoice">КаталогНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="КаталогСборки" id="4">
+			<DataPath>Объект.КаталогСборки</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="КаталогСборкиКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КаталогСборкиРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="StartChoice">КаталогНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="МаскиФайлов" id="7">
+			<DataPath>Объект.МаскиФайлов</DataPath>
+			<ContextMenu name="МаскиФайловКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="МаскиФайловРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="КаталогБазы" id="12">
+			<DataPath>Объект.КаталогБазы</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="КаталогБазыКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="КаталогБазыРасширеннаяПодсказка" id="14"/>
+			<Events>
+				<Event name="StartChoice">КаталогНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="ПользовательБазы" id="18">
+			<DataPath>Объект.ПользовательБазы</DataPath>
+			<ContextMenu name="ПользовательБазыКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ПользовательБазыРасширеннаяПодсказка" id="20"/>
+		</InputField>
+		<InputField name="РеестрЗагружаемыхФайлов" id="15">
+			<DataPath>Объект.РеестрЗагружаемыхФайлов</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="РеестрЗагружаемыхФайловКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="РеестрЗагружаемыхФайловРасширеннаяПодсказка" id="17"/>
+			<Events>
+				<Event name="StartChoice">РеестрЗагружаемыхФайловНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<Button name="ВыполнитьОбработку" id="10">
+			<Type>UsualButton</Type>
+			<DefaultButton>true</DefaultButton>
+			<CommandName>Form.Command.ВыполнитьОбработку</CommandName>
+			<Parameter xsi:nil="true"/>
+			<ExtendedTooltip name="ВыполнитьОбработкуРасширеннаяПодсказка" id="11"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПодготовкаКонфигурацииКПостроениюДереваВызоваПроцедур</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.ПользовательБазы</Field>
+				<Field>Объект.КаталогБазы</Field>
+				<Field>Объект.КаталогИсходныхФайлов</Field>
+				<Field>Объект.РеестрЗагружаемыхФайлов</Field>
+				<Field>Объект.КаталогСборки</Field>
+				<Field>Объект.МаскиФайлов</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьОбработку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обработку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обработку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьОбработку</Action>
+		</Command>
+	</Commands>
+</Form>

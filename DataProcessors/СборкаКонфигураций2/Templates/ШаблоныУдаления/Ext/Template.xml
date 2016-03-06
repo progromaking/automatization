@@ -10,41 +10,56 @@
 		</languageInfo>
 	</languageSettings>
 	<columns>
-		<size>3</size>
+		<size>1</size>
 		<columnsItem>
 			<index>0</index>
 			<column>
 				<formatIndex>1</formatIndex>
 			</column>
 		</columnsItem>
-		<columnsItem>
-			<index>1</index>
-			<column>
-				<formatIndex>2</formatIndex>
-			</column>
-		</columnsItem>
 	</columns>
+	<rowsItem>
+		<index>0</index>
+		<row>
+			<c>
+				<c>
+					<f>2</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИмяУзла</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
 	<rowsItem>
 		<index>1</index>
 		<row>
 			<c>
 				<c>
-					<f>0</f>
+					<f>1</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ГРУППА</v8:content>
+							<v8:content>v8:Type</v8:content>
 						</v8:item>
 					</tl>
 				</c>
 			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>2</index>
+		<row>
 			<c>
 				<c>
-					<f>0</f>
+					<f>1</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа1</v8:content>
+							<v8:content>:Content</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -56,22 +71,11 @@
 		<row>
 			<c>
 				<c>
-					<f>0</f>
+					<f>1</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ТИП</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>0</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ТаблицаЗначений</v8:content>
+							<v8:content>Template</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -83,22 +87,11 @@
 		<row>
 			<c>
 				<c>
-					<f>0</f>
+					<f>1</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ИМЯ</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>0</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>МояТаблица</v8:content>
+							<v8:content>ConditionalSeparation</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -109,13 +102,12 @@
 		<index>5</index>
 		<row>
 			<c>
-				<i>2</i>
 				<c>
-					<f>3</f>
+					<f>1</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Колонка1</v8:content>
+							<v8:content>Page</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -125,15 +117,13 @@
 	<rowsItem>
 		<index>6</index>
 		<row>
-			<formatIndex>4</formatIndex>
 			<c>
-				<i>2</i>
 				<c>
-					<f>3</f>
+					<f>1</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Строка</v8:content>
+							<v8:content>object</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -144,29 +134,12 @@
 		<index>7</index>
 		<row>
 			<c>
-				<i>2</i>
 				<c>
-					<f>3</f>
+					<f>1</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Значение 1</v8:content>
-						</v8:item>
-					</tl>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>9</index>
-		<row>
-			<c>
-				<c>
-					<f>0</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>КОНЕЦ</v8:content>
+							<v8:content>FillValue</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -174,35 +147,19 @@
 		</row>
 	</rowsItem>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>5</defaultFormatIndex>
-	<height>10</height>
-	<vgLevels>1</vgLevels>
-	<vgRows>10</vgRows>
-	<vg>
-		<b>2</b>
-		<e>9</e>
-	</vg>
-	<line width="1" gap="false">
-		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
-	</line>
+	<defaultFormatIndex>3</defaultFormatIndex>
+	<height>8</height>
+	<vgRows>8</vgRows>
 	<font faceName="Arial" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute"/>
-	<font faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute"/>
+	<format>
+		<width>119</width>
+	</format>
 	<format>
 		<font>0</font>
-		<textColor>#666699</textColor>
-	</format>
-	<format>
-		<font>1</font>
-		<textPlacement>Auto</textPlacement>
-	</format>
-	<format>
-		<border>0</border>
-	</format>
-	<format>
-		<textColor>#666699</textColor>
+		<width>119</width>
+		<horizontalAlignment>Center</horizontalAlignment>
 	</format>
 	<format>
 		<width>72</width>
-		<textPlacement>Cut</textPlacement>
 	</format>
 </document>
