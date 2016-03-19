@@ -115,9 +115,11 @@
 			<Language>Русский</Language>
 			<Subsystem>Тесты</Subsystem>
 			<Subsystem>АвтоматизацияОбновлений</Subsystem>
+			<Subsystem>ДеревоВызоваПроцедур</Subsystem>
 			<SessionParameter>ЛогПоследнегоСценария</SessionParameter>
 			<CommonModule>ПакетныйРежим</CommonModule>
 			<CommonModule>Логирование</CommonModule>
+			<CommonModule>Отладка</CommonModule>
 			<Catalog>Профили</Catalog>
 			<Catalog>ПараметрыШагов</Catalog>
 			<Enum>ТипыПрофилей</Enum>
@@ -144,10 +146,10 @@
 			<DataProcessor>ТипПрофиля_АнализСинтаксическогоКонтроля</DataProcessor>
 			<DataProcessor>СверкаФайловСборки</DataProcessor>
 			<DataProcessor>СборкаКонфигураций</DataProcessor>
-			<DataProcessor>ПостроениеДереваПроцедур</DataProcessor>
 			<DataProcessor>СборкаКонфигураций2</DataProcessor>
 			<DataProcessor>АнализСинтаксическогоКонтроля</DataProcessor>
-			<DataProcessor>ПодготовкаКонфигурацииКПостроениюДереваВызоваПроцедур</DataProcessor>
+			<DataProcessor>ПодготовкаКонфигурацииКПостроениюДереваВызовов</DataProcessor>
+			<DataProcessor>ДеревоВызововПроцедур</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

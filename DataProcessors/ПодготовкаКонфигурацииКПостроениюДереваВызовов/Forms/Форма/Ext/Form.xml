@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыполнитьОбработкуКонфигурации" id="12">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<DefaultItem>true</DefaultItem>
+				<CommandName>Form.Command.ВыполнитьОбработкуКонфигурации</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаВыполнитьОбработкуКонфигурацииРасширеннаяПодсказка" id="13"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПользователь" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользователь</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<InputField name="Пользователь" id="1">
+					<DataPath>Объект.Пользователь</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПользовательКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Пароль" id="4">
+					<DataPath>Объект.Пароль</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПарольКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="РабочийКаталог" id="7">
+			<DataPath>Объект.РабочийКаталог</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РабочийКаталогКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РабочийКаталогРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Table name="ДеревоМетаданных" id="14">
+			<Representation>Tree</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ДеревоМетаданных</DataPath>
+			<RowPictureDataPath>Объект.ДеревоМетаданных.ИндексКартинки</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Abs>RowsPicture.bmp</xr:Abs>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<ContextMenu name="ДеревоМетаданныхКонтекстноеМеню" id="15"/>
+			<AutoCommandBar name="ДеревоМетаданныхКоманднаяПанель" id="16">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ДеревоМетаданныхСвернутьДерево" id="40">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СвернутьДерево</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ДеревоМетаданныхСвернутьДеревоРасширеннаяПодсказка" id="41"/>
+					</Button>
+					<Button name="ДеревоМетаданныхРазвернутьДерево" id="42">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.РазвернутьДерево</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ДеревоМетаданныхРазвернутьДеревоРасширеннаяПодсказка" id="43"/>
+					</Button>
+					<Button name="ДеревоМетаданныхОтметитьМетаданныеИзЗамера" id="38">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтметитьМетаданныеИзЗамера</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ДеревоМетаданныхОтметитьМетаданныеИзЗамераРасширеннаяПодсказка" id="39"/>
+					</Button>
+					<Button name="ДеревоМетаданныхВывестиСписок" id="36">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ДеревоМетаданных.StandardCommand.OutputList</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ДеревоМетаданныхВывестиСписокРасширеннаяПодсказка" id="37"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДеревоМетаданныхРасширеннаяПодсказка" id="17"/>
+			<SearchStringAddition name="ДеревоМетаданныхСтрокаПоиска" id="18">
+				<Source>
+					<lf:elementId>14</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="ДеревоМетаданныхСтрокаПоискаКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="ДеревоМетаданныхСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоМетаданныхСостояниеПросмотра" id="21">
+				<Source>
+					<lf:elementId>14</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="ДеревоМетаданныхСостояниеПросмотраКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="ДеревоМетаданныхСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоМетаданныхУправлениеПоиском" id="24">
+				<Source>
+					<lf:elementId>14</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="ДеревоМетаданныхУправлениеПоискомКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="ДеревоМетаданныхУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ДеревоМетаданныхПередНачаломДобавления</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="ДеревоМетаданныхПометка" id="27">
+					<DataPath>Объект.ДеревоМетаданных.Пометка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоМетаданныхПометкаКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ДеревоМетаданныхПометкаРасширеннаяПодсказка" id="29"/>
+					<Events>
+						<Event name="OnChange">ДеревоМетаданныхПометкаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ДеревоМетаданныхИмя" id="30">
+					<DataPath>Объект.ДеревоМетаданных.Имя</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоМетаданныхИмяКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ДеревоМетаданныхИмяРасширеннаяПодсказка" id="32"/>
+				</InputField>
+				<InputField name="ДеревоМетаданныхСиноним" id="33">
+					<DataPath>Объект.ДеревоМетаданных.Синоним</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоМетаданныхСинонимКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ДеревоМетаданныхСинонимРасширеннаяПодсказка" id="35"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПодготовкаКонфигурацииКПостроениюДереваВызовов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.ДеревоМетаданных">
+					<Column name="Пометка" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content> </v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Имя" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Синоним" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Синоним</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИндексКартинки" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Индекс картинки</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ПрефиксФайла" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Префикс файла</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьОбработкуКонфигурации" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обработку конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обработку конфигурации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьОбработкуКонфигурации</Action>
+		</Command>
+		<Command name="ОтметитьМетаданныеИзЗамера" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить метаданные из замера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить метаданные из замера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.QueryWizardTempTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтметитьМетаданныеИзЗамера</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СвернутьДерево" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть дерево</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть дерево</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CollapseAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СвернутьДерево</Action>
+		</Command>
+		<Command name="РазвернутьДерево" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть дерево</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть дерево</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExpandAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РазвернутьДерево</Action>
+		</Command>
+	</Commands>
+</Form>
