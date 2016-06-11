@@ -145,8 +145,8 @@
 			<DataProcessor>ТипПрофиля_СинтаксическийКонтроль</DataProcessor>
 			<DataProcessor>ТипПрофиля_АнализСинтаксическогоКонтроля</DataProcessor>
 			<DataProcessor>СверкаФайловСборки</DataProcessor>
+			<DataProcessor>УдалитьСборкаКонфигураций</DataProcessor>
 			<DataProcessor>СборкаКонфигураций</DataProcessor>
-			<DataProcessor>СборкаКонфигураций2</DataProcessor>
 			<DataProcessor>АнализСинтаксическогоКонтроля</DataProcessor>
 			<DataProcessor>ПодготовкаКонфигурацииКПостроениюДереваВызовов</DataProcessor>
 			<DataProcessor>ДеревоВызововПроцедур</DataProcessor>
