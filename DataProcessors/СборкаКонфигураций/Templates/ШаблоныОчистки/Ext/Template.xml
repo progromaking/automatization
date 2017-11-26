@@ -578,10 +578,26 @@
 			</c>
 		</row>
 	</rowsItem>
+	<rowsItem>
+		<index>35</index>
+		<row>
+			<c>
+				<c>
+					<f>3</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>CommandParameterType</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>3</defaultFormatIndex>
-	<height>35</height>
-	<vgRows>35</vgRows>
+	<defaultFormatIndex>4</defaultFormatIndex>
+	<height>36</height>
+	<vgRows>36</vgRows>
 	<font faceName="Arial" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute"/>
 	<format>
 		<width>171</width>
@@ -590,6 +606,9 @@
 		<font>0</font>
 		<width>119</width>
 		<horizontalAlignment>Center</horizontalAlignment>
+	</format>
+	<format>
+		<width>119</width>
 	</format>
 	<format>
 		<width>72</width>

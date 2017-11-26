@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -7,7 +7,6 @@
 			<Button name="ФормаВыполнитьТекущийСценарий" id="68">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ВыполнитьТекущийСценарий</CommandName>
-				<Parameter xsi:nil="true"/>
 				<ExtendedTooltip name="ФормаВыполнитьТекущийСценарийРасширеннаяПодсказка" id="69"/>
 			</Button>
 		</ChildItems>
@@ -69,33 +68,32 @@
 									<Button name="РеквизитыПрофиляОбновитьРеквизиты" id="66">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ОбновитьРеквизиты</CommandName>
-										<Parameter xsi:nil="true"/>
 										<ExtendedTooltip name="РеквизитыПрофиляОбновитьРеквизитыРасширеннаяПодсказка" id="67"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="РеквизитыПрофиляРасширеннаяПодсказка" id="20"/>
 							<SearchStringAddition name="РеквизитыПрофиляСтрокаПоиска" id="21">
-								<Source>
-									<lf:elementId>17</lf:elementId>
-									<lf:additionId>0</lf:additionId>
-								</Source>
+								<AdditionSource>
+									<Item>РеквизитыПрофиля</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
 								<ContextMenu name="РеквизитыПрофиляСтрокаПоискаКонтекстноеМеню" id="22"/>
 								<ExtendedTooltip name="РеквизитыПрофиляСтрокаПоискаРасширеннаяПодсказка" id="23"/>
 							</SearchStringAddition>
 							<ViewStatusAddition name="РеквизитыПрофиляСостояниеПросмотра" id="24">
-								<Source>
-									<lf:elementId>17</lf:elementId>
-									<lf:additionId>1</lf:additionId>
-								</Source>
+								<AdditionSource>
+									<Item>РеквизитыПрофиля</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
 								<ContextMenu name="РеквизитыПрофиляСостояниеПросмотраКонтекстноеМеню" id="25"/>
 								<ExtendedTooltip name="РеквизитыПрофиляСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
 							</ViewStatusAddition>
 							<SearchControlAddition name="РеквизитыПрофиляУправлениеПоиском" id="27">
-								<Source>
-									<lf:elementId>17</lf:elementId>
-									<lf:additionId>2</lf:additionId>
-								</Source>
+								<AdditionSource>
+									<Item>РеквизитыПрофиля</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
 								<ContextMenu name="РеквизитыПрофиляУправлениеПоискомКонтекстноеМеню" id="28"/>
 								<ExtendedTooltip name="РеквизитыПрофиляУправлениеПоискомРасширеннаяПодсказка" id="29"/>
 							</SearchControlAddition>
@@ -151,26 +149,26 @@
 							<AutoCommandBar name="НаборПрофилейКоманднаяПанель" id="46"/>
 							<ExtendedTooltip name="НаборПрофилейРасширеннаяПодсказка" id="47"/>
 							<SearchStringAddition name="НаборПрофилейСтрокаПоиска" id="48">
-								<Source>
-									<lf:elementId>44</lf:elementId>
-									<lf:additionId>0</lf:additionId>
-								</Source>
+								<AdditionSource>
+									<Item>НаборПрофилей</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
 								<ContextMenu name="НаборПрофилейСтрокаПоискаКонтекстноеМеню" id="49"/>
 								<ExtendedTooltip name="НаборПрофилейСтрокаПоискаРасширеннаяПодсказка" id="50"/>
 							</SearchStringAddition>
 							<ViewStatusAddition name="НаборПрофилейСостояниеПросмотра" id="51">
-								<Source>
-									<lf:elementId>44</lf:elementId>
-									<lf:additionId>1</lf:additionId>
-								</Source>
+								<AdditionSource>
+									<Item>НаборПрофилей</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
 								<ContextMenu name="НаборПрофилейСостояниеПросмотраКонтекстноеМеню" id="52"/>
 								<ExtendedTooltip name="НаборПрофилейСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
 							</ViewStatusAddition>
 							<SearchControlAddition name="НаборПрофилейУправлениеПоиском" id="54">
-								<Source>
-									<lf:elementId>44</lf:elementId>
-									<lf:additionId>2</lf:additionId>
-								</Source>
+								<AdditionSource>
+									<Item>НаборПрофилей</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
 								<ContextMenu name="НаборПрофилейУправлениеПоискомКонтекстноеМеню" id="55"/>
 								<ExtendedTooltip name="НаборПрофилейУправлениеПоискомРасширеннаяПодсказка" id="56"/>
 							</SearchControlAddition>

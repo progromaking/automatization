@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаВыполнитьОбработкуКонфигурации" id="12">
@@ -7,7 +7,6 @@
 				<DefaultButton>true</DefaultButton>
 				<DefaultItem>true</DefaultItem>
 				<CommandName>Form.Command.ВыполнитьОбработкуКонфигурации</CommandName>
-				<Parameter xsi:nil="true"/>
 				<ExtendedTooltip name="ФормаВыполнитьОбработкуКонфигурацииРасширеннаяПодсказка" id="13"/>
 			</Button>
 		</ChildItems>
@@ -76,51 +75,47 @@
 					<Button name="ДеревоМетаданныхСвернутьДерево" id="40">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.СвернутьДерево</CommandName>
-						<Parameter xsi:nil="true"/>
 						<ExtendedTooltip name="ДеревоМетаданныхСвернутьДеревоРасширеннаяПодсказка" id="41"/>
 					</Button>
 					<Button name="ДеревоМетаданныхРазвернутьДерево" id="42">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.РазвернутьДерево</CommandName>
-						<Parameter xsi:nil="true"/>
 						<ExtendedTooltip name="ДеревоМетаданныхРазвернутьДеревоРасширеннаяПодсказка" id="43"/>
 					</Button>
 					<Button name="ДеревоМетаданныхОтметитьМетаданныеИзЗамера" id="38">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.ОтметитьМетаданныеИзЗамера</CommandName>
-						<Parameter xsi:nil="true"/>
 						<ExtendedTooltip name="ДеревоМетаданныхОтметитьМетаданныеИзЗамераРасширеннаяПодсказка" id="39"/>
 					</Button>
 					<Button name="ДеревоМетаданныхВывестиСписок" id="36">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Item.ДеревоМетаданных.StandardCommand.OutputList</CommandName>
-						<Parameter xsi:nil="true"/>
 						<ExtendedTooltip name="ДеревоМетаданныхВывестиСписокРасширеннаяПодсказка" id="37"/>
 					</Button>
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="ДеревоМетаданныхРасширеннаяПодсказка" id="17"/>
 			<SearchStringAddition name="ДеревоМетаданныхСтрокаПоиска" id="18">
-				<Source>
-					<lf:elementId>14</lf:elementId>
-					<lf:additionId>0</lf:additionId>
-				</Source>
+				<AdditionSource>
+					<Item>ДеревоМетаданных</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
 				<ContextMenu name="ДеревоМетаданныхСтрокаПоискаКонтекстноеМеню" id="19"/>
 				<ExtendedTooltip name="ДеревоМетаданныхСтрокаПоискаРасширеннаяПодсказка" id="20"/>
 			</SearchStringAddition>
 			<ViewStatusAddition name="ДеревоМетаданныхСостояниеПросмотра" id="21">
-				<Source>
-					<lf:elementId>14</lf:elementId>
-					<lf:additionId>1</lf:additionId>
-				</Source>
+				<AdditionSource>
+					<Item>ДеревоМетаданных</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
 				<ContextMenu name="ДеревоМетаданныхСостояниеПросмотраКонтекстноеМеню" id="22"/>
 				<ExtendedTooltip name="ДеревоМетаданныхСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
 			</ViewStatusAddition>
 			<SearchControlAddition name="ДеревоМетаданныхУправлениеПоиском" id="24">
-				<Source>
-					<lf:elementId>14</lf:elementId>
-					<lf:additionId>2</lf:additionId>
-				</Source>
+				<AdditionSource>
+					<Item>ДеревоМетаданных</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
 				<ContextMenu name="ДеревоМетаданныхУправлениеПоискомКонтекстноеМеню" id="25"/>
 				<ExtendedTooltip name="ДеревоМетаданныхУправлениеПоискомРасширеннаяПодсказка" id="26"/>
 			</SearchControlAddition>
